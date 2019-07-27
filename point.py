@@ -50,4 +50,4 @@ class Segment:
         self.end_point = end_point
 
     def length(self):
-        return math.sqrt((self.end_point.x - self.start_point.x)**2 - (self.end_point.y - self.start_point.y)**2)
+        return math.sqrt((self.end_point.x - self.start_point.x)**2 + (self.end_point.y - self.start_point.y)**2)
