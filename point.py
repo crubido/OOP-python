@@ -23,6 +23,7 @@ class Point:
 
 
 class ePoint:
+
     def __init__(self, radius, angle):
         self.radius = radius
         self.angle = angle
@@ -40,3 +41,13 @@ class ePoint:
 
     def __cmp__(self, other):
         return (self.x > other.x) and (self.y > other.y)
+
+
+class Segment:
+
+    def __init__(self, start_point, end_point):
+        self.start_point = start_point
+        self.end_point = end_point
+
+    def length(self):
+        return math.sqrt((self.end_point.x - self.start_point.x)**2 - (self.end_point.y - self.start_point.y)**2)
