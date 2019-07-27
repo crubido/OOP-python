@@ -17,3 +17,6 @@ class Point:
 
     def __str__(self):
         return "(" + str(self.x) + ", " + str(self.y) + ")"
+
+    def __cmp__(self, other):
+        return (self.x > other.x) and (self.y > other.y)
