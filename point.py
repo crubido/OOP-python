@@ -20,3 +20,23 @@ class Point:
 
     def __cmp__(self, other):
         return (self.x > other.x) and (self.y > other.y)
+
+
+class ePoint:
+    def __init__(self, radius, angle):
+        self.radius = radius
+        self.angle = angle
+        self.x = radius * math.cos(angle)
+        self.y = radius * math.sin(angle)
+
+    def cartesian(self):
+        return (self.x, self.y)
+
+    def polar(self):
+        return (self.radius, self.angle)
+
+    def __str__(self):
+        return "(" + str(self.x) + ", " + str(self.y) + ")"
+
+    def __cmp__(self, other):
+        return (self.x > other.x) and (self.y > other.y)
